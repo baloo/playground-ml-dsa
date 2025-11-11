@@ -4,13 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-pkcs8 = { version = "=0.11.0-rc.1", features = ["pem"] }
-x509-cert = { version = "0.3.0-pre.0", features = ["builder"] }
-ml-dsa = { version = "0.1.0-pre.0" }
-hex-literal = "0.4.1"
-rand = "0.8.5"
-signature = { version = "=2.3.0-pre.4", default-features = false }
-
-[patch.crates-io]
-# https://github.com/RustCrypto/signatures/pull/890
-ml-dsa = { git = "https://github.com/baloo/signatures.git", branch = "baloo/ml-dsa/encode-private-key" }
+pkcs8 = { version = "0.11.0-rc.8", features = ["pem"] }
+x509-cert = { version = "0.3.0-rc.2", features = ["builder"] }
+ml-dsa = { version = "0.1.0-rc.2", features = ["pkcs8"] }
+hex-literal = "1"
+rand = "0.10.0-rc.0"
+signature = { version = "3.0.0-rc.5", default-features = false }
